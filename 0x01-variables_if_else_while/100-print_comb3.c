@@ -14,8 +14,10 @@ for (i = 0; i < 10; i++)
 {
 for (j = i + 1; j < 10; j++)
 {
-putchar(48 + i);
-putchar(48 + j);
+putchar(47 + i);
+putchar(47 + j);
+putchar(',');
+putchar(' ');
 }
 }
 putchar ('\n');
