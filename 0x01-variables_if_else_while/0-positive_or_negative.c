@@ -5,7 +5,7 @@
 /**
  * main - assign to the variable
  * Return: always 0 (success)
-*/ 
+ */ 
 int main(void)
 {
 	int n;
