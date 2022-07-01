@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
- *main -> assign a number to a variable
- *betty style doc for function main goes there 
- *Return : alwayys 0 (success)
+ * main -> assign a random number to the variable
+ * Return : always 0
  */
 int main(void)
 {
