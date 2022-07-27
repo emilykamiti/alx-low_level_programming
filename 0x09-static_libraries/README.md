@@ -1,1 +1,1 @@
-Hard times
+guard your heart
