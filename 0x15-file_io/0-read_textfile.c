@@ -6,9 +6,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 /**
- * main - check the code
- * Desc: function that reads a text file and prints it to the POSIX stdout.
- * Return : Always return 0
+ * read_textfile - Reads a text file and prints it to the POSIX
+ * @letters: The number of letters the
+ *           function should read and print.
+ *
+ * Return: If the function fails or filename is NULL - 0.
  * Developer: kamiti Emily
  */
 ssize_t read_textfile(const char *filename, size_t letters)
