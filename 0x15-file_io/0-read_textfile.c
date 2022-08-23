@@ -10,10 +10,15 @@
 
 ssize_t read_textfile(const char *filename, size_t letters);
 {
-	char c;
-	int fd = open("Baby steps", O_RDONLY, O);
+	int fd, sz;
+	char c = (char *) malloc(100, sizeof(char));
 
-	read(fd, &c, 1);
-	printf("c = %c/n", c);
-	exit(0)
+	fd = open("my rite code", O_RDONLY);
+	if (fd < 0)
+	perror("r1"); exit(1);
+
+	sz = read(fd, c, 10);
+	printf("read(% d, c, 10). returned %d bytes were read.\n", fd, sz);
+	c[sz] = '\0';
+	printf("name them: %s\n", c);
 }
