@@ -17,8 +17,8 @@ ssize_t read_textfile(const char *filename, size_t letters);
 	if (fd < 0)
 	perror("r1"); exit(1);
 
-	sz = read(fd, c, 10);
-	printf("read(% d, c, 10). returned %d bytes were read.\n", fd, sz);
+	sz = read(fd, c, 4);
+	printf("read(% d, c, 4). returned %d bytes were read.\n", fd, sz);
 	c[sz] = '\0';
 	printf("name them: %s\n", c);
 }
