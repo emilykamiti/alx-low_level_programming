@@ -1,8 +1,3 @@
-/**
- * Author:Kamiti Emily
- * File name: 2-append_text_to_file.c
- */
-
 #include <stdio.h>
 #include "main.h"
 #include <sys/types.h>
