@@ -12,31 +12,26 @@
  * @text_content: NULL terminated string to write to the file.
  * Return: 1 on success, -1 on failure.
  */
-int append_text_to_file(const char *filename, char *text_content);
+nt append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, res_wr, len;
+	int op, wr, len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		fd = open(filename, O_WRONLY | O_APPEND;
-		if (fd == -1)
-		return (-1);
-		len = 0;
-		for for (len = 0; text_content[len];)
+		for (len = 0; text_content[len];)
 			len++;
-		res_wr = write(fd, text_content, len);
-		if (res_wr == -1)
-		{
-		close(fd);
-			write(STDOUT_FILENO, "fails", 5);
-			return (-1);
-		}
 	}
-	close(fd);
+
+	op = open(filename, O_WRONLY | O_APPEND);
+	wr = write(op, text_content, len);
+
+	if (op == -1 || wr == -1)
+		return (-1);
+
+	close(op);
+
 	return (1);
 }
-
-
