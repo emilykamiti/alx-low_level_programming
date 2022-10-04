@@ -1,1 +1,1 @@
-Mynew installation dynamic libraries
+Dynamic Library
